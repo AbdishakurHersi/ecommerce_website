@@ -11,7 +11,7 @@ dbConnect();
 const app = express();
 app.use(express.json());
 //route
-app.use("/", userRoutes);
+app.use("/api/v1/users", userRoutes);
 app.use(notFound);
 app.use(globalErrorHandler);
 
