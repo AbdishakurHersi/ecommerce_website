@@ -11,6 +11,7 @@ import productRoutes from "../routes/productRoute.js";
 import categoriesRouter from "../routes/categoriesRouter.js";
 import colorRouter from "../routes/colorRouter.js";
 import brandRouter from "../routes/brandRouter.js";
+import reviewRouter from "../routes/reviewRouter.js";
 
 dbConnect();
 const app = express();
@@ -21,6 +22,7 @@ app.use("/api/v1/products/", productRoutes);
 app.use("/api/v1/categories/", categoriesRouter);
 app.use("/api/v1/brands/", brandRouter);
 app.use("/api/v1/color/", colorRouter);
+app.use("/api/v1/reviews/", reviewRouter);
 app.use(notFound);
 app.use(globalErrorHandler);
 
